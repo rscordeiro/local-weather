@@ -1,0 +1,19 @@
+#display-div {
+  height: 37em;
+  background-color: black;
+}
+
+#calendar-div {
+  background-color: #777DA7;
+  height: 8.6em;
+}
+
+#temp-div {
+  background-color: #777DA7;
+  height: 8.6em;
+}
+
+#location-div {
+  background-color: #777DA7;
+  height: 8.6em;
+}
