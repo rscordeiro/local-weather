@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html>
+<link href="https://fonts.googleapis.com/css?family=Raleway|Sansita" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="javascript.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<title>Your local weather</title>
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div id="display-div" class="col-xs-12">
-
+      <div class="jumbotron" id="title-div">
+        <h1 class="text-center">Your local weather <span class="glyphicon glyphicon-cloud"></span></h1>
       </div>
     </div>
 
     <div class="row">
 
-      <div id="calendar-div" class="col-xs-4">
+      <div id="temp-div" class="text-center col-xs-4">
+        <p id="p-temp"> </p>
+
+        <div class="btn-group-vertical">
+          <button type="button" class="btn btn-default btn-sm active" id="c-btn">&deg;C</button>
+          <button type="button" class="btn btn-default btn-sm" id="f-btn">&deg;F</button>
+        </div>
+      </div>
+
+      <div id="display-div" class="text-center col-xs-4">
 
       </div>
 
-      <div id="temp-div" class="col-xs-4">
+      <div id="location-div" class="text-center col-xs-4">
 
-      </div>
-
-      <div id="location-div" class="col-xs-4">
-        
       </div>
     </div>
 

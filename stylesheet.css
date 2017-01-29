@@ -1,20 +1,45 @@
-#display-div {
-  height: 37em;
-  background-color: black;
-  color: white;
+body {
+  overflow: hidden;
 }
 
-#calendar-div {
-  background-color: #777DA7;
-  height: 8.6em;
+#title-div {
+  margin-bottom: -1px;
+  background-image: url('clouds_elias.jpeg');
+  color: white;
+  font-family: 'Sansita', sans-serif;
 }
 
 #temp-div {
-  background-color: #777DA7;
-  height: 8.6em;
+  background-color: #274C77;
+  height: 100%;
+  padding-bottom: 600px;
+  padding-top: 200px;
+}
+
+#display-div {
+  height: 100%;
+  background-color: #6096BA;
+  padding-bottom: 600px;
+  padding-top: 200px;
 }
 
 #location-div {
-  background-color: #777DA7;
-  height: 8.6em;
+  background-color: #A3CEF1;
+  height: 100%;
+  padding-bottom: 600px;
+  padding-top: 200px;
+}
+
+#p-temp {
+  display: inline-block;
+  font-size: 50px;
+}
+
+.btn-group-vertical {
+  display: inline-block;
+  margin-top: -30px;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
 }
