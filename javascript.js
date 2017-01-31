@@ -17,12 +17,11 @@ $(document).ready(function(){
 
     var whatWeather = function(conditions) {
       var tempe = conditions.main.temp;
-      var mainWeather = "<p>" + conditions.weather[0].main + "</p> <br> <p>" + conditions.weather[0].description + "</p>";
-      $("#display-div").html(mainWeather);
+      var mainWeather = "<p>" + conditions.weather[0].description + "</p>";
+      var icon = conditions.weather[0].icon;
 
-
-      var tempF = ((tempe - 273.15) * 1.8 + 32);
-      var tempC = (tempe - 273.15);
+      var tempF = Math.floor(((tempe - 273.15) * 1.8 + 32));
+      var tempC = Math.floor((tempe - 273.15));
 
       var toCelcius = function() {
         $("#p-temp").html(tempC);
@@ -46,6 +45,48 @@ $(document).ready(function(){
         $("#c-btn").removeClass("active");
       });
 
+      switch(icon) {
+        case "01d":
+            $("#display-div").html("<a href='' class='icon' data-icon='B'></a>" + mainWeather);
+            break;
+        case "01n":
+            $("#display-div").html("<a href='' class='icon' data-icon='C'></a>" + mainWeather);
+            break;
+        case "02d":
+            $("#display-div").html("<a href='' class='icon' data-icon='H'></a>" + mainWeather);
+            break;
+        case "02n":
+            $("#display-div").html("<a href='' class='icon' data-icon='I'></a>" + mainWeather);
+            break;
+        case "03d":
+        case "03n":
+            $("#display-div").html("<a href='' class='icon' data-icon='N'></a>" + mainWeather);
+            break;
+        case "04d":
+        case "04n":
+            $("#display-div").html("<a href='' class='icon' data-icon='Y'></a>" + mainWeather);
+            break;
+        case "09d":
+        case "09n":
+            $("#display-div").html("<a href='' class='icon' data-icon='Q'></a>" + mainWeather);
+            break;
+        case "10d":
+        case "10n":
+            $("#display-div").html("<a href='' class='icon' data-icon='R'></a>" + mainWeather);
+            break;
+        case "11d":
+        case "11n":
+            $("#display-div").html("<a href='' class='icon' data-icon='P'></a>" + mainWeather);
+            break;
+        case "13d":
+        case "13n":
+            $("#display-div").html("<a href='' class='icon' data-icon='W'></a>" + mainWeather);
+            break;
+        case "50d":
+        case "50n":
+            $("#display-div").html("<a href='' class='icon' data-icon='M'></a>" + mainWeather);
+            break;
+      }
     };
   });
 
