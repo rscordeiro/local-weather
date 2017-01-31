@@ -17,7 +17,7 @@ $(document).ready(function(){
 
     var whatWeather = function(conditions) {
       var tempe = conditions.main.temp;
-      var mainWeather = "<p>" + conditions.weather[0].description + "</p>";
+      var mainWeather = "<p id='p-cond'>" + conditions.weather[0].description + "</p>";
       var icon = conditions.weather[0].icon;
 
       var tempF = Math.floor(((tempe - 273.15) * 1.8 + 32));
@@ -47,40 +47,40 @@ $(document).ready(function(){
 
       switch(icon) {
         case "01d":
-            $("#display-div").html("<a href='' class='icon' data-icon='B'></a>" + mainWeather);
+            $("#display-div").html("<a href='' class='icon' data-icon='1'></a>" + mainWeather);
             break;
         case "01n":
-            $("#display-div").html("<a href='' class='icon' data-icon='C'></a>" + mainWeather);
+            $("#display-div").html("<a href='' class='icon' data-icon='2'></a>" + mainWeather);
             break;
         case "02d":
-            $("#display-div").html("<a href='' class='icon' data-icon='H'></a>" + mainWeather);
+            $("#display-div").html("<a href='' class='icon' data-icon='3'></a>" + mainWeather);
             break;
         case "02n":
-            $("#display-div").html("<a href='' class='icon' data-icon='I'></a>" + mainWeather);
+            $("#display-div").html("<a href='' class='icon' data-icon='4'></a>" + mainWeather);
             break;
         case "03d":
         case "03n":
-            $("#display-div").html("<a href='' class='icon' data-icon='N'></a>" + mainWeather);
+            $("#display-div").html("<a href='' class='icon' data-icon='5'></a>" + mainWeather);
             break;
         case "04d":
         case "04n":
-            $("#display-div").html("<a href='' class='icon' data-icon='Y'></a>" + mainWeather);
+            $("#display-div").html("<a href='' class='icon' data-icon='%'></a>" + mainWeather);
             break;
         case "09d":
         case "09n":
-            $("#display-div").html("<a href='' class='icon' data-icon='Q'></a>" + mainWeather);
+            $("#display-div").html("<a href='' class='icon' data-icon='7'></a>" + mainWeather);
             break;
         case "10d":
         case "10n":
-            $("#display-div").html("<a href='' class='icon' data-icon='R'></a>" + mainWeather);
+            $("#display-div").html("<a href='' class='icon' data-icon='8'></a>" + mainWeather);
             break;
         case "11d":
         case "11n":
-            $("#display-div").html("<a href='' class='icon' data-icon='P'></a>" + mainWeather);
+            $("#display-div").html("<a href='' class='icon' data-icon='6'></a>" + mainWeather);
             break;
         case "13d":
         case "13n":
-            $("#display-div").html("<a href='' class='icon' data-icon='W'></a>" + mainWeather);
+            $("#display-div").html("<a href='' class='icon' data-icon='#'></a>" + mainWeather);
             break;
         case "50d":
         case "50n":
